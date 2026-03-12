@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Autenticador Local</title>
+  <!-- add ?v=1 or bump number when you update CSS to avoid browser cache -->
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Adicionar nova conta 2FA</h1>
+    
+    <form action="/add" method="POST">
+      <label>Conta (site): </label><br>
+      <input type="text" name="name"><br><br>
+
+      <label>Segredo (chave TOTP): </label><br>
+      <input type="text" name="secret"><br><br>
+
+      <button type="submit">Adicionar</button>
+    </form>
+
+    <hr>
+    
+    <a href="/view">Consultar códigos</a>
+  </div>
+</body>
+</html>
