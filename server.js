@@ -6,6 +6,12 @@ const path = require('path');
 const MASTER_PASSWORD = '';
 const SECRETS_FILE = path.join(__dirname, 'secrets.json');
 const app = express();
+const https = require('https');
+const options = {
+  key: fs.readFileSync('~/certs/key.pem'),
+  cert: fs.readFileSync('~/certs/cert.pem')
+};
+
 
 console.log('Authenticator:', authenticator);
 app.use(express.urlencoded({extended:true}));
@@ -90,3 +96,7 @@ app.get('/view', (req,res)=> {
 });
 
 app.listen(3000, () => console.log('Servidor rodando em localhost na porta 3000: https://localhost:3000'))
+
+https.createServer(options, app).listen(3001, () => {
+  console.log('Servidor rodando em localhost na porta 3001: https://localhost:3001');
+});
