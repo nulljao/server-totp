@@ -47,6 +47,7 @@ form button {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-size: 16px;
 }
 
 form button:hover {
@@ -116,4 +117,22 @@ a:hover {
   font-size: 14px;
   display: inline-block;
   margin-top: 4px;
+}
+
+.back-link {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background: #007bff;  /* Azul, como o botão "Adicionar" */
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 20px;  /* Espaço acima do botão */
+  cursor: pointer;
+}
+
+.back-link:hover {
+  background: #0056b3;  /* Azul mais escuro no hover */
 }
