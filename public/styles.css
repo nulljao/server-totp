@@ -49,6 +49,20 @@ form button {
   cursor: pointer;
 }
 
+.view-link {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
 form button:hover {
   background: #0056b3;
 }
