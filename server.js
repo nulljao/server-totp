@@ -8,8 +8,8 @@ const SECRETS_FILE = path.join(__dirname, 'secrets.json');
 const app = express();
 const https = require('https');
 const options = {
-  key: fs.readFileSync('~/certs/key.pem'),
-  cert: fs.readFileSync('~/certs/cert.pem')
+  key: fs.readFileSync('/home/joao/certs/key.pem'),
+  cert: fs.readFileSync('/home/joao/certs/cert.pem')
 };
 
 
@@ -95,8 +95,8 @@ app.get('/view', (req,res)=> {
   res.sendFile(__dirname + '/codes.html');
 });
 
-app.listen(3000, () => console.log('Servidor rodando em localhost na porta 3000: https://localhost:3000'))
+app.listen(3001, () => console.log('Servidor rodando em localhost na porta 3000: https://localhost:3000'))
 
-https.createServer(options, app).listen(3001, () => {
-  console.log('Servidor rodando em localhost na porta 3001: https://localhost:3001');
-});
+//https.createServer(options, app).listen(3001, () => {
+//  console.log('Servidor rodando em localhost na porta 3001: https://localhost:3001');
+//});
